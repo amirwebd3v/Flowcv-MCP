@@ -1,4 +1,4 @@
-import { apiRequest } from "../../api-client.js";
+import { apiRequest, mergeEntryWithExisting } from "../../api-client.js";
 import { ensureAuth } from "../auth-flow.js";
 import { printSuccess, printJSON, confirmOrCancel, requireArg, parseJSONFlag } from "../output.js";
 import type { CLIContext } from "../types.js";
@@ -25,9 +25,10 @@ export async function update(ctx: CLIContext): Promise<void> {
   requireArg(ctx.args[2], "Usage: flowcv entry update <resume_id> <section> <entry_id> --data '{...}'");
   const entry = parseJSONFlag<Record<string, unknown>>(ctx.flags.data);
   entry.id = ctx.args[2];
+  const mergedEntry = await mergeEntryWithExisting(ctx.args[0], ctx.args[1], entry);
 
   await apiRequest("/api/resumes/save_entry", "PATCH", {
-    resumeId: ctx.args[0], sectionId: ctx.args[1], entry,
+    resumeId: ctx.args[0], sectionId: ctx.args[1], entry: mergedEntry,
   });
 
   if (ctx.json) printJSON({ success: true });

@@ -46,7 +46,7 @@ flowcv whoami      # Print current user email
 
 1. `FLOWCV_SESSION_COOKIE` environment variable
 2. `~/.config/flowcv/config.json`
-3. `.mcp.json` in current directory
+3. Workspace MCP config (`.vscode/mcp.json` in VS Code, or legacy `.mcp.json`)
 
 ## Resume Management
 
@@ -60,6 +60,8 @@ flowcv resume delete <id>                 # Delete (asks for confirmation)
 flowcv resume download <id>              # Download PDF
 flowcv resume translate <id> <lang>       # Translate (e.g., de, fr, es)
 ```
+
+For free-plan or single-resume workflows, prefer `flowcv resume get <id>` plus in-place updates on that same resume. Hide irrelevant entries instead of duplicating unless you intentionally want a second live resume.
 
 ## Section Entries
 
@@ -82,6 +84,8 @@ flowcv entry delete <resume_id> <section> <entry_id>
 flowcv entry list <resume_id> <section>
 flowcv entry reorder <resume_id> <section> --data '["id1","id2","id3"]'
 ```
+
+`flowcv entry update` merges the provided fields with the current stored entry by ID before saving, so omitted fields are preserved. Use `flowcv entry list` or `flowcv resume get <id>` when you want to inspect the full entry object before editing.
 
 ### Section Types
 

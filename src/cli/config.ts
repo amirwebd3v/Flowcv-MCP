@@ -6,6 +6,7 @@
 import { readFileSync, writeFileSync, mkdirSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
 import { homedir } from "node:os";
+import { readWorkspaceFlowcvCookie } from "../mcp-config.js";
 
 export interface FlowCVConfig {
   cookie: string;
@@ -40,7 +41,7 @@ export function clearConfig(): void {
 
 /**
  * Get the raw cookie value (without "flowcvsidapp=" prefix).
- * Priority: env var > config file > .mcp.json
+ * Priority: env var > config file > workspace MCP config
  */
 export function getCookie(): string | null {
   // 1. Environment variable
@@ -51,15 +52,9 @@ export function getCookie(): string | null {
   const config = loadConfig();
   if (config?.cookie) return config.cookie;
 
-  // 3. .mcp.json
-  try {
-    const mcpRaw = readFileSync(join(process.cwd(), ".mcp.json"), "utf-8");
-    const mcpJson = JSON.parse(mcpRaw);
-    const cookie = mcpJson?.mcpServers?.flowcv?.env?.FLOWCV_SESSION_COOKIE;
-    if (cookie) return cookie;
-  } catch {
-    // .mcp.json not found
-  }
+  // 3. Workspace MCP config (.vscode/mcp.json in VS Code, or legacy .mcp.json)
+  const workspaceCookie = readWorkspaceFlowcvCookie();
+  if (workspaceCookie) return workspaceCookie;
 
   return null;
 }

@@ -1,4 +1,6 @@
-import { apiRequest } from "../../api-client.js";
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { apiRequest, downloadResumePdf } from "../../api-client.js";
 import { ensureAuth } from "../auth-flow.js";
 import { printSuccess, printTable, printJSON, confirmOrCancel, requireArg } from "../output.js";
 import type { CLIContext } from "../types.js";
@@ -70,10 +72,20 @@ export async function del(ctx: CLIContext): Promise<void> {
 export async function download(ctx: CLIContext): Promise<void> {
   ensureAuth();
   requireArg(ctx.args[0], "Usage: flowcv resume download <id>");
-  const res = await apiRequest<Record<string, unknown>>(
-    "/api/resumes/download", "POST", { resumeId: ctx.args[0] }
-  );
-  printJSON(res.data);
+  const previewPageCountRaw = ctx.flags["preview-page-count"];
+  const previewPageCount = typeof previewPageCountRaw === "string" ? Number(previewPageCountRaw) : 1;
+  if (!Number.isFinite(previewPageCount) || previewPageCount < 1) {
+    throw new Error("--preview-page-count must be a positive number.");
+  }
+
+  const outputFlag = ctx.flags.output;
+  const outputPath = path.resolve(typeof outputFlag === "string" ? outputFlag : `resume-${ctx.args[0]}.pdf`);
+  const pdfBytes = await downloadResumePdf(ctx.args[0], previewPageCount);
+  await mkdir(path.dirname(outputPath), { recursive: true });
+  await writeFile(outputPath, pdfBytes);
+
+  if (ctx.json) printJSON({ savedTo: outputPath, bytes: pdfBytes.byteLength });
+  else printSuccess(`PDF saved to ${outputPath}`);
 }
 
 export async function translate(ctx: CLIContext): Promise<void> {

@@ -2,14 +2,14 @@
 # FlowCV — One-liner installer
 #
 # CLI only:
-#   curl -fsSL https://raw.githubusercontent.com/EhsanulHaqueSiam/flowcv-mcp/master/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/amirwebd3v/Flowcv-mcp/master/install.sh | bash
 #
 # CLI + MCP server:
-#   curl -fsSL https://raw.githubusercontent.com/EhsanulHaqueSiam/flowcv-mcp/master/install.sh | bash -s -- --mcp
+#   curl -fsSL https://raw.githubusercontent.com/amirwebd3v/Flowcv-mcp/master/install.sh | bash -s -- --mcp
 
 set -e
 
-REPO="https://github.com/EhsanulHaqueSiam/flowcv-mcp.git"
+REPO="https://github.com/amirwebd3v/Flowcv-mcp.git"
 INSTALL_DIR="${FLOWCV_INSTALL_DIR:-$HOME/.local/share/flowcv-mcp}"
 SETUP_MCP=false
 
@@ -54,6 +54,7 @@ CLI_SKILL_DIR="$HOME/.claude/skills/flowcv-cli"
 mkdir -p "$CLI_SKILL_DIR"
 cp "$INSTALL_DIR/skill/cli-skill/SKILL.md" "$CLI_SKILL_DIR/SKILL.md"
 echo "       CLI skill: $CLI_SKILL_DIR"
+echo "       GitHub Copilot customizations: $INSTALL_DIR/.github/ and $INSTALL_DIR/.vscode/mcp.json"
 
 if [ "$SETUP_MCP" = true ]; then
   # MCP skill
@@ -81,7 +82,11 @@ echo "     flowcv login"
 echo ""
 
 if [ "$SETUP_MCP" = true ]; then
-  echo "  2. Add MCP server to Claude Code (pick one):"
+  echo "  2. GitHub Copilot / VS Code:"
+  echo "     Open $INSTALL_DIR in VS Code and use its .vscode/mcp.json,"
+  echo "     or add node $INSTALL_DIR/dist/index.js to your user mcp.json."
+  echo ""
+  echo "  3. Claude Code (pick one):"
   echo ""
   echo "     # Global (all projects):"
   echo "     claude mcp add -s user flowcv -- node $INSTALL_DIR/dist/index.js"

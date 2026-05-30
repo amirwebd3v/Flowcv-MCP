@@ -1,0 +1,1313 @@
+{
+  "id": "b6da2b41-f40b-4718-9875-49dc84f139dc",
+  "userId": "41b85968-15c0-47fc-8b64-e335558d1de5",
+  "mongoId": "66df9709e1245910b8749fbc",
+  "title": "Amir-Zahmatmand",
+  "order": 0,
+  "feedbackToken": "5cau5q7ml7",
+  "webToken": "h09vm7bfdr",
+  "uuid": "b6da2b41-f40b-4718-9875-49dc84f139dc",
+  "feedbackEnabled": false,
+  "webResumeLive": true,
+  "webResumeDownloadBtn": false,
+  "webResumeSearchIndex": true,
+  "webResumeCached": false,
+  "personalDetails": {
+    "age": "",
+    "phone": "+49155 6053 2683",
+    "photo": {
+      "xPct": 0.0009990009990008542,
+      "yPct": 0.0009990009990008542,
+      "shape": "round",
+      "imageId": "avatar/Xc2WfR0OL5msrANtbXEY9.png",
+      "widthPct": 0.9990009990009991,
+      "heightPct": 0.9990009990009991,
+      "originalWidth": 1361,
+      "originalHeight": 1361
+    },
+    "gender": "",
+    "github": "",
+    "social": {
+      "linkedIn": {
+        "link": "https://linkedin.com/in/amirwebd3v",
+        "display": "/in/amirwebd3v"
+      }
+    },
+    "address": "Germany",
+    "website": "amirweb.dev",
+    "birthday": {
+      "day": "",
+      "year": "",
+      "month": ""
+    },
+    "fullName": "Amir Zahmatmand",
+    "jobTitle": "Frontend Engineer",
+    "military": "",
+    "passport": "",
+    "portfolio": "",
+    "usAddress": false,
+    "githubLink": "",
+    "birthdayStr": "",
+    "nationality": "",
+    "websiteLink": "",
+    "detailsOrder": [
+      "address",
+      "phone",
+      "displayEmail",
+      "linkedIn",
+      "website"
+    ],
+    "displayEmail": "a.zahmatmand@gmail.com",
+    "maritalStatus": "",
+    "portfolioLink": "",
+    "drivingLicense": "",
+    "showPlaceholder": false
+  },
+  "content": {
+    "work": {
+      "text": "",
+      "entries": [
+        {
+          "id": "cfe99d00-5238-4a1c-ba8a-77999700d7c8",
+          "employer": "ScanDog | B2B Application Security Platform",
+          "isHidden": false,
+          "jobTitle": "Frontend Engineer",
+          "location": "Berlin, Germany",
+          "createdAt": "2026-05-15T07:19:32.905Z",
+          "updatedAt": "2026-05-16T07:24:48.898Z",
+          "endDateNew": "2026",
+          "description": "<ul><li><p>Built semantic HTML/CSS interfaces meeting WCAG standards; hit 95–100% Performance scores.</p></li><li><p>Drove SEO growth in &lt;3 months (83.3K impressions, 499 clicks, schema, web accessibility, content audits) </p></li><li><p>Conducted code reviews and enforced quality via CI/CD pipelines on GitHub Actions and Cloudflare. </p></li><li><p>Crafted and shipped modular, production-ready components using Astro's island architecture and React.</p></li></ul>",
+          "employerLink": "",
+          "startDateNew": "2025",
+          "showPlaceholder": false
+        },
+        {
+          "id": "_OWwopgfjJL9mJjih-2FP",
+          "city": "Remote",
+          "country": "",
+          "endDate": {
+            "hide": false,
+            "year": "2024",
+            "month": "08",
+            "ongoing": true,
+            "onlyYear": false,
+            "customOngoingWord": "present"
+          },
+          "employer": "Freelance | Portfolio, Booking System, CMS",
+          "isHidden": false,
+          "jobTitle": "Frontend Developer",
+          "location": "Remote",
+          "createdAt": "2025-08-21T16:59:34.781Z",
+          "startDate": {
+            "hide": false,
+            "year": "2023",
+            "month": "04",
+            "ongoing": false,
+            "onlyYear": false
+          },
+          "updatedAt": "2026-05-16T07:25:11.683Z",
+          "endDateNew": "2025",
+          "isNewEntry": false,
+          "updated_at": "2024-10-14T17:19:07.648Z",
+          "description": "<ul><li><p>Architected SSR and SSG applications with Nuxt and Vue.js using Composition API and TypeScript. </p></li><li><p>Integrated RESTful APIs, debugged/tested cross-layer issues, and maintained CI/CD via Vitest, Git and Docker.</p></li><li><p>Built reusable, modular UI components with libraries like Vuetify, Tailwind CSS, and Bootstrap from scratch.</p></li><li><p>Managed application state with Pinia across auth flows, filters, forms, and user sessions.</p></li></ul>",
+          "employerLink": "https://amirweb.dev/portfolio",
+          "startDateNew": "2023",
+          "showPlaceholder": false
+        },
+        {
+          "id": "U_UmO4P7Alm9_eh12UPzi",
+          "city": "Dubai",
+          "country": "UAE",
+          "endDate": {
+            "hide": false,
+            "year": "2023",
+            "month": "04",
+            "ongoing": false,
+            "onlyYear": false,
+            "customOngoingWord": "present"
+          },
+          "employer": "UPTIN | Push to Talk Service",
+          "isHidden": false,
+          "jobTitle": "Frontend Developer",
+          "location": "Dubai, UAE",
+          "createdAt": "2025-08-21T16:59:34.721Z",
+          "startDate": {
+            "hide": false,
+            "year": "2021",
+            "month": "07",
+            "ongoing": false,
+            "onlyYear": false
+          },
+          "updatedAt": "2026-05-16T07:25:25.531Z",
+          "endDateNew": "2023",
+          "isNewEntry": false,
+          "updated_at": "2024-10-06T19:32:23.375Z",
+          "description": "<ul><li style=\"text-align: justify\"><p>Turned Figma designs into a responsive Vue.js interface using semantic HTML, SEO friendly patterns.</p></li><li style=\"text-align: justify\"><p>Structured Pinia stores for sessions, forms, filters, and pagination across the full application. </p></li><li style=\"text-align: justify\"><p>Wrote unit tests with Vitest, debugged component behaviour, and integrated REST APIs via Axios. </p></li><li style=\"text-align: justify\"><p>Worked iteratively with backend and design teams, refining features across each sprint cycle.</p></li></ul>",
+          "employerLink": "https://uptin.app/",
+          "startDateNew": "2022",
+          "showPlaceholder": false
+        },
+        {
+          "id": "dd7fb6b4-a054-490b-bf00-b732e74cc15a",
+          "employer": "SR Auto Part Trading | E-commerce",
+          "isHidden": false,
+          "jobTitle": "Web Adminstrator",
+          "createdAt": "2026-05-15T18:42:24.819Z",
+          "updatedAt": "2026-05-16T07:25:42.050Z",
+          "endDateNew": "2022",
+          "description": "<ul><li><p>Customized Shopify themes with HTML, CSS, and JavaScript; improved UI/UX and accessibility.</p></li><li><p>Improved on-page SEO through semantic HTML, schema markup, and content audits.</p></li></ul>",
+          "employerLink": "",
+          "startDateNew": "2021",
+          "showPlaceholder": false
+        },
+        {
+          "id": "95xoqxeMlpS3gBOgrrgBr",
+          "city": "Bushehr",
+          "country": "Iran",
+          "endDate": {
+            "hide": false,
+            "year": "2021",
+            "month": "06",
+            "ongoing": false,
+            "onlyYear": false,
+            "customOngoingWord": "present"
+          },
+          "employer": "Persian Gulf University (Internship)",
+          "isHidden": true,
+          "jobTitle": "Web Developer",
+          "location": "Bushehr, Iran",
+          "createdAt": "2025-08-21T16:59:34.610Z",
+          "startDate": {
+            "hide": false,
+            "year": "2020",
+            "month": "02",
+            "ongoing": false,
+            "onlyYear": false
+          },
+          "updatedAt": "2025-08-21T16:59:34.610Z",
+          "endDateNew": "06/2021",
+          "isNewEntry": false,
+          "updated_at": "2024-10-04T11:46:20.535Z",
+          "description": "<ul><li>Helped over <strong>15</strong> students improve their web project completion over <strong>2 </strong>semesters through weekly<strong> HTML, CSS, and JavaScript</strong> workshops</li><li>Teamed up with <strong>3</strong> other students to build the new Engineering Faculty's website using <strong>JavaScript, TypeScript, and Php</strong></li><li>Improved the <strong>UI and UX</strong> of the Engineering faculty website, enhancing usability across different screen sizes and accessibility using <strong>W3.CSS</strong></li></ul>",
+          "employerLink": "https://jam.pgu.ac.ir/en",
+          "startDateNew": "02/2020",
+          "showPlaceholder": false
+        },
+        {
+          "id": "9240a0a6-ac8b-4b3d-aed0-a2adfda56b44",
+          "employer": "Freelance",
+          "isHidden": true,
+          "jobTitle": "Quality Assurance & Data Annotation",
+          "location": "Remote",
+          "createdAt": "2025-08-21T17:00:30.527Z",
+          "updatedAt": "2026-05-15T07:18:40.022Z",
+          "endDateNew": "Present",
+          "description": "<ul><li><p>Scored AI‑generated outputs for correctness, relevance, and policy compliance.</p></li><li><p>Annotated large multilingual datasets to improve AI training.</p></li><li><p>Produced actionable error analysis for model refinement.</p></li></ul>",
+          "employerLink": "",
+          "startDateNew": "2023",
+          "showPlaceholder": false
+        },
+        {
+          "id": "a7c334c9-4a1d-462d-9a78-a7ea4b15201a",
+          "employer": "Persian Gulf University",
+          "isHidden": true,
+          "jobTitle": "IT & E‑Learning Specialist",
+          "location": "In-site",
+          "createdAt": "2025-08-21T17:01:47.186Z",
+          "updatedAt": "2026-05-15T07:18:40.581Z",
+          "endDateNew": "2021",
+          "description": "<ul><li><p>Developed and QA‑tested digital training content on Moodle.</p></li><li><p>Delivered instructional material in Persian/English with focus on accuracy and accessibility.</p></li></ul>",
+          "employerLink": "",
+          "startDateNew": "2020",
+          "showPlaceholder": false
+        },
+        {
+          "id": "6c4acd32-2216-4cc1-a3bb-875de86d9d7b",
+          "employer": "TVTO eLearning Center",
+          "isHidden": true,
+          "jobTitle": "Teaching Staff",
+          "location": "In-site",
+          "createdAt": "2025-08-21T17:32:28.012Z",
+          "updatedAt": "2026-05-15T07:18:41.324Z",
+          "endDateNew": "11/2023",
+          "description": "<ul><li><p>Delivered 500+ hours of Python and ICDL instruction, maintaining strict quality standards for educational content.</p></li></ul>",
+          "employerLink": "",
+          "startDateNew": "06/2023",
+          "showPlaceholder": false
+        }
+      ],
+      "iconKey": "briefcase",
+      "displayName": "Experience",
+      "sectionType": "work",
+      "disableAutoSort": true
+    },
+    "skill": {
+      "text": "",
+      "entries": [
+        {
+          "id": "F0Yuyvl8htzhT7hhLyyQt",
+          "level": "",
+          "skill": "",
+          "infoHtml": "<ul><li><strong>JavaScript  -  TypeScript  -  Vue.js  -  Nuxt.js  -  Html  -  Css  -  Sass  -  Vuetify  -  Tailwind</strong></li></ul>",
+          "isHidden": true,
+          "created_at": "2024-10-03T17:24:43.384Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:42:49.168Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "9gAaMzLdvggMkbRUITTzN",
+          "skill": "",
+          "infoHtml": "<ul><li><strong>RESTful  -  GraphQL  -  Pinia  -  Vuex  -  Axios  -  JWT  -  Socket.io</strong></li></ul>",
+          "isHidden": true,
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:43:25.573Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "IqZOHX_KXEELX2S7Ww1G0",
+          "skill": "",
+          "infoHtml": "<ul><li><strong>PostgreSQL  -  MySQL  -  SQLite  -  Nginx  -  Apache</strong></li></ul>",
+          "isHidden": true,
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:44:49.246Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "fJIwl60eSyZnBVCUM4yJy",
+          "skill": "",
+          "infoHtml": "<ul><li><strong>Docker  -  GitHub  -  GitLab  - Trello</strong></li></ul>",
+          "isHidden": true,
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:44:34.848Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "u05bRX_4y65YX373V8uXl",
+          "skill": "JavaScript",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:33.250Z",
+          "updatedAt": "2025-08-21T17:28:33.250Z",
+          "created_at": "2024-10-03T19:47:57.608Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:47:57.608Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "lqBsivQItU32bnpOsE6_k",
+          "skill": "TypeScript",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.938Z",
+          "updatedAt": "2025-08-21T17:28:32.938Z",
+          "created_at": "2024-10-03T19:48:09.024Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:48:09.024Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "lTZKjkTGYr-pGv0HJPoeN",
+          "skill": "Vue.js",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:33.061Z",
+          "updatedAt": "2025-08-21T17:28:33.061Z",
+          "created_at": "2024-10-03T19:48:23.195Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:48:23.195Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "DYInJZ9_9yme0UgX-B37A",
+          "skill": "Nuxt.js",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:33.250Z",
+          "updatedAt": "2025-08-21T17:28:33.250Z",
+          "created_at": "2024-10-03T19:48:32.049Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:48:32.049Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "qc2E1XBhKrjA2aJaITvrJ",
+          "skill": "HTML",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.765Z",
+          "updatedAt": "2025-08-21T17:28:32.765Z",
+          "created_at": "2024-10-03T19:48:45.342Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:48:45.342Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "FPQr6tkSTMW0kmDLasSHs",
+          "skill": "CSS",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.803Z",
+          "updatedAt": "2025-08-21T17:28:32.803Z",
+          "created_at": "2024-10-03T19:48:51.255Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:48:51.255Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "p79i3HrzjaASKnmUHGPa_",
+          "skill": "SASS",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.753Z",
+          "updatedAt": "2025-08-21T17:28:32.753Z",
+          "created_at": "2024-10-03T19:49:00.068Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:49:00.068Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "5QZIGcKguW6K2-ODEc-Cg",
+          "skill": "Vuetify",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.823Z",
+          "updatedAt": "2025-08-21T17:28:32.823Z",
+          "created_at": "2024-10-03T19:49:12.110Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:49:12.110Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "-FqeZRrHgctMIdAgJyjLg",
+          "skill": "Bootstrap",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.797Z",
+          "updatedAt": "2025-08-21T17:28:32.797Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-04T08:33:22.106Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "hjDu1Ja0GFFE5lUoZnzNB",
+          "skill": "Tailwind",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.804Z",
+          "updatedAt": "2025-08-21T17:28:32.804Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T20:01:47.797Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "5gWkbEf8yUABnk5NCCcz6",
+          "skill": "RESTful",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.810Z",
+          "updatedAt": "2025-08-21T17:28:32.810Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T20:15:48.901Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "LtUm8uLaGWQFdOSQPhfSu",
+          "skill": "GraphQL",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.753Z",
+          "updatedAt": "2025-08-21T17:28:32.753Z",
+          "created_at": "2024-10-03T19:50:06.696Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:50:06.696Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "8Y7LvFHicUgfoVBI5Gx57",
+          "skill": "Pinia",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:33.013Z",
+          "updatedAt": "2025-08-21T17:28:33.013Z",
+          "created_at": "2024-10-03T19:50:14.627Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:50:14.627Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "zacYHcju5rfZuXTdxtTFv",
+          "skill": "Vuex",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:32.758Z",
+          "updatedAt": "2025-08-21T17:28:32.758Z",
+          "created_at": "2024-10-03T19:50:21.686Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:50:21.686Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "bQbRIV3zeuyrZTMRT7AR2",
+          "skill": "Axios",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.597Z",
+          "updatedAt": "2025-08-21T17:28:40.597Z",
+          "created_at": "2024-10-03T19:50:28.720Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:50:28.720Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "aOnTxxwq1K1MsVwXalqIc",
+          "skill": "Ajax",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.670Z",
+          "updatedAt": "2025-08-21T17:28:40.670Z",
+          "created_at": "2024-10-03T19:50:34.821Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:50:34.821Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "-PMvQCCC_wGnt9DHjtSHy",
+          "skill": "JWT",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.702Z",
+          "updatedAt": "2025-08-21T17:28:40.702Z",
+          "created_at": "2024-10-03T19:50:43.183Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:50:43.183Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "krSzFilQo-7v5dCsJ5b0I",
+          "skill": "Socket.io",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.750Z",
+          "updatedAt": "2025-08-21T17:28:40.750Z",
+          "created_at": "2024-10-03T19:50:51.065Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:50:51.065Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "ay297jbjnR4Smg_CXGADL",
+          "skill": "MySQL",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.749Z",
+          "updatedAt": "2025-08-21T17:28:40.749Z",
+          "created_at": "2024-10-03T19:51:14.257Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:51:14.257Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "fFKTiBx53IDZt7XR7tlOG",
+          "skill": "PostgreSQL",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.847Z",
+          "updatedAt": "2025-08-21T17:28:40.847Z",
+          "created_at": "2024-10-03T19:51:07.373Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:51:07.373Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "_cyPdl2y02V7fkpIFeev8",
+          "skill": "SQLite",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.846Z",
+          "updatedAt": "2025-08-21T17:28:40.846Z",
+          "created_at": "2024-10-03T19:51:24.871Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:51:24.871Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "1JKE3lLWEJ0E6IZk3f_CW",
+          "skill": "Nginx",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.883Z",
+          "updatedAt": "2025-08-21T17:28:40.883Z",
+          "created_at": "2024-10-03T19:51:32.439Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:51:32.439Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "kSJLrpga0ZiixAMS0unvY",
+          "skill": "Apache",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.924Z",
+          "updatedAt": "2025-08-21T17:28:40.924Z",
+          "created_at": "2024-10-03T19:51:40.264Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:51:40.264Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "Y7PysKGdFy5fElEDTjAuY",
+          "skill": "Docker",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:40.941Z",
+          "updatedAt": "2025-08-21T17:28:40.941Z",
+          "created_at": "2024-10-03T19:51:53.227Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:51:53.227Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "crqmQxFkPf58_ZFDJQxby",
+          "skill": "GitHub",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:45.945Z",
+          "updatedAt": "2025-08-21T17:28:45.945Z",
+          "created_at": "2024-10-03T19:52:02.839Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:52:02.839Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "La5bIR4BP9lEte52QSkln",
+          "skill": "Trello",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:28:58.180Z",
+          "updatedAt": "2025-08-21T17:28:58.180Z",
+          "created_at": "2024-10-03T19:52:15.122Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-03T19:52:15.122Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "d723a138-b0a9-4742-922a-29d04e5ed9a5",
+          "level": "",
+          "skill": "",
+          "infoHtml": "<ul><li><p>AI Output Evaluation &amp; Data Annotation (Text &amp; Image)</p></li><li><p>Quality Assurance (Content &amp; Functional)</p></li><li><p>Linguistic &amp; Cultural Review (Persian/English)</p></li><li><p>Content Safety &amp; Policy Compliance Checks</p></li><li><p>Attention to Detail &amp; Accuracy in Large Datasets</p></li><li><p>Technical Tools: CMS, LMS (Moodle), GitHub, Docker</p></li><li><p>Basic Scripting (Python) for Data Processing</p></li><li><p>Collaboration in Remote &amp; Cross‑Functional Teams</p></li></ul>",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:29:08.996Z",
+          "updatedAt": "2026-05-15T07:40:35.750Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "8490ced1-a100-4148-b104-b79f5c6bee6e",
+          "level": "",
+          "skill": "Languages",
+          "infoHtml": "<p style=\"text-align: justify\">TypeScript · JavaScript · HTML5 · Python</p>",
+          "isHidden": false,
+          "createdAt": "2026-05-15T07:44:55.237Z",
+          "updatedAt": "2026-05-15T19:07:13.350Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "3b5a4fa1-d044-48e8-a89f-ba669bbe6bd1",
+          "level": "",
+          "skill": "Frameworks",
+          "infoHtml": "<p>Vue.js · Nuxt · React · Astro · Pinia </p><p style=\"text-align: justify\"></p><p style=\"text-align: justify\"></p>",
+          "isHidden": false,
+          "createdAt": "2026-05-15T07:49:47.157Z",
+          "updatedAt": "2026-05-15T08:00:22.255Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "e8d45745-0678-4dce-b098-79652c2fffec",
+          "level": "",
+          "skill": "Styling",
+          "infoHtml": "<p>Tailwind CSS · Shadcn · SASS · Bootstrap · Vuetify · Figma</p>",
+          "isHidden": false,
+          "createdAt": "2026-05-15T07:48:29.497Z",
+          "updatedAt": "2026-05-15T20:07:41.090Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "24ad1c3f-b9fe-44f9-9160-29902d9275f8",
+          "level": "",
+          "skill": "Architectures",
+          "infoHtml": "<p>SPA · MPA · Modular · SSG · SSR · ISR · CSR</p>",
+          "isHidden": false,
+          "createdAt": "2026-05-15T08:16:44.495Z",
+          "updatedAt": "2026-05-26T09:47:56.186Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "481d142f-bc4f-44e3-b9a0-2ae4a352c8ff",
+          "level": "",
+          "skill": "CI/CD & Testing",
+          "infoHtml": "<p>Vitest · Vite · Playwright · Code Review · Docker · GitHub · WCAG · RESTful API</p>",
+          "isHidden": false,
+          "createdAt": "2026-05-15T07:51:28.240Z",
+          "updatedAt": "2026-05-15T08:20:04.556Z",
+          "showPlaceholder": false
+        }
+      ],
+      "iconKey": "head-side-brain",
+      "displayName": "Skills",
+      "sectionType": "skill",
+      "disableAutoSort": true
+    },
+    "profile": {
+      "text": "",
+      "entries": [
+        {
+          "id": "Mlp92T0k3DUvKn89WuQiF",
+          "text": "<p style=\"text-align:justify\">A Frontend Developer with <strong>4+</strong> years of experience, dedicated to creating user-friendly web solutions and continuous learning. <strong>Proactively</strong> communicates, remains curious, and willingly takes on tasks beyond the <strong>usual scope</strong>. Thrives on solving complex UI challenges with creative thinking and a performance-first approach. Careful about optimizing load times, and automating<strong> SEO</strong> processes to ensure <strong>ongoing website effectiveness</strong>. Quick to master new dashboards and <strong>CRMs</strong>, driving team efficiency and consistently delivering high-impact project outcomes.</p>",
+          "isHidden": true,
+          "createdAt": "2025-08-21T16:59:31.321Z",
+          "updatedAt": "2025-08-21T16:59:31.321Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-14T11:53:51.005Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "cA5Z1vdlYRWdP3S4hYCDm",
+          "text": "<p>Experienced Frontend Developer with a proven track record of delivering high-performance, <strong>SEO</strong>-optimized websites. Skilled in <strong>Vue, Nuxt, Javascript, Typescript, HTML, and CSS/Sass</strong>. Proven ability to collaborate effectively in cross-functional teams and meet tight deadlines. Demonstrated expertise in transforming complex requirements into intuitive and user-friendly interfaces.</p>",
+          "isHidden": true,
+          "created_at": "2024-09-12T21:11:09.922Z",
+          "isNewEntry": false,
+          "updated_at": "2024-09-12T21:11:09.922Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "71fb6209-c750-4e06-912e-81a71c389667",
+          "text": "<p>A Data & Content Quality Specialist with expertise in <strong>AI output evaluation, data annotation, QA, and linguistic review</strong>. Proven ability to assess <strong>Persian/English</strong> content for accuracy, cultural relevance, and safety compliance. Adept at handling large datasets under structured guidelines to enhance AI model performance.</p>",
+          "isHidden": true,
+          "createdAt": "2025-08-21T16:58:50.835Z",
+          "updatedAt": "2026-05-15T07:16:41.435Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "2ff58239-775f-4833-b31a-8c207f35e7dc",
+          "text": "<p>Frontend Engineer with 4+ years delivering scalable, accessible web applications using React, Vue.js, and Nuxt. Skilled in the Composition API, modular component architecture, semantic HTML, modern CSS, and RESTful API integration, consistently achieving 95%+ Lighthouse performance scores. Experienced in security, unit, and end‑to‑end testing workflows and maintaining CI/CD pipelines. Collaborative in cross‑functional Agile teams, partnering with design, product, and backend engineering to build high‑quality user interfaces at scale.</p>",
+          "isHidden": false,
+          "createdAt": "2026-05-15T07:16:26.703Z",
+          "updatedAt": "2026-05-16T07:22:57.797Z",
+          "showPlaceholder": false
+        }
+      ],
+      "iconKey": "address-card",
+      "displayName": "Summary",
+      "sectionType": "profile",
+      "disableAutoSort": true
+    },
+    "language": {
+      "text": "",
+      "entries": [
+        {
+          "id": "Mt2GSRMZDWHbwJujeEpnd",
+          "level": "4",
+          "infoHtml": "<p>C1</p>",
+          "language": "English",
+          "createdAt": "2025-08-21T17:27:03.461Z",
+          "updatedAt": "2026-05-15T18:26:10.310Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-04T08:41:26.939Z",
+          "showPlaceholder": false
+        },
+        {
+          "id": "H818yQJuGwSw9epJr_nh4",
+          "level": "",
+          "infoHtml": "<p>B1</p>",
+          "isHidden": false,
+          "language": "German",
+          "createdAt": "2025-08-21T17:26:55.818Z",
+          "updatedAt": "2026-05-15T18:26:50.591Z",
+          "created_at": "2024-09-10T00:52:04.628Z",
+          "isNewEntry": false,
+          "updated_at": "2024-10-04T08:41:00.515Z",
+          "showPlaceholder": false
+        }
+      ],
+      "iconKey": "earth-americas",
+      "displayName": "Languages",
+      "sectionType": "language",
+      "disableAutoSort": true
+    },
+    "education": {
+      "text": "",
+      "entries": [
+        {
+          "id": "995b3a30-0d2b-4aa5-a844-eec7bfc9ea15",
+          "degree": "MSc in Cyber Security",
+          "school": "Arden University",
+          "isHidden": false,
+          "location": "",
+          "createdAt": "2025-08-21T17:06:06.262Z",
+          "updatedAt": "2026-05-16T07:23:15.482Z",
+          "endDateNew": "2026",
+          "schoolLink": "",
+          "startDateNew": "2025",
+          "showPlaceholder": false
+        },
+        {
+          "id": "QVCFQtCUZbTYzCihEnZDm",
+          "city": "Bushehr",
+          "degree": "BSc in Software Engineering",
+          "school": "Persian Gulf University",
+          "country": "Iran",
+          "endDate": {
+            "hide": false,
+            "year": "2021",
+            "month": null,
+            "ongoing": false,
+            "onlyYear": true,
+            "customOngoingWord": "present"
+          },
+          "location": "",
+          "createdAt": "2025-08-21T17:04:56.805Z",
+          "startDate": {
+            "hide": false,
+            "year": "2016",
+            "month": null,
+            "ongoing": false,
+            "onlyYear": true
+          },
+          "updatedAt": "2026-05-16T07:24:15.141Z",
+          "endDateNew": "2021",
+          "isNewEntry": false,
+          "schoolLink": "",
+          "updated_at": "2024-09-10T18:09:42.088Z",
+          "description": "",
+          "startDateNew": "2016",
+          "showPlaceholder": false
+        }
+      ],
+      "iconKey": "graduation-cap",
+      "displayName": "Education",
+      "sectionType": "education",
+      "disableAutoSort": true
+    },
+    "certificate": {
+      "text": "",
+      "entries": [
+        {
+          "id": "ZWjkJaQakm6I4Y6oZYDez",
+          "infoHtml": "<p></p>",
+          "isHidden": true,
+          "isNewEntry": false,
+          "certificate": "IELTS (B2)",
+          "showPlaceholder": false
+        },
+        {
+          "id": "f43cb131-22d4-45db-9d87-da5a95de3842",
+          "infoHtml": "",
+          "isHidden": false,
+          "createdAt": "2026-05-26T09:45:27.492Z",
+          "updatedAt": "2026-05-26T09:45:50.794Z",
+          "certificate": "Front-end System Design",
+          "certificateLink": "https://static.frontendmasters.com/ud/c/36ed7f4ac6/gkuyfreSHY/frontend-system-design.pdf",
+          "showPlaceholder": false
+        },
+        {
+          "id": "caa7d2a0-88b8-4d21-b4ac-2cb3a161d8e9",
+          "infoHtml": "",
+          "isHidden": true,
+          "createdAt": "2025-08-21T17:24:29.974Z",
+          "updatedAt": "2026-05-26T09:44:50.143Z",
+          "certificate": "Search Engine Optimization (SEO) Principles",
+          "certificateLink": "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzODIzIiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODgzMDI1Ml84MzAyNDI5MTc1NTc4NzcyNzIwNC5wbmciLCJ1c2VybmFtZSI6IkFtaXJob3NzZWluIFphaG1hdG1hbmQifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F6766%2F-Introduction-to-SEO%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1583908768432156443&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVL3X2CAyq9DEyCEuyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAFpjqrBBAAAA",
+          "showPlaceholder": false
+        },
+        {
+          "id": "fc7a1c63-e66a-4ea2-8606-a1e141789baf",
+          "infoHtml": "",
+          "isHidden": false,
+          "createdAt": "2026-05-15T18:56:27.688Z",
+          "updatedAt": "2026-05-15T19:00:38.576Z",
+          "certificate": "JavaScript Algorithms and Data Structures",
+          "certificateLink": "https://www.freecodecamp.org/certification/AmirwebDev/javascript-algorithms-and-data-structures-v8",
+          "showPlaceholder": false
+        },
+        {
+          "id": "cceb6e59-b501-4635-a5d6-5e8f2ea1c238",
+          "infoHtml": "",
+          "isHidden": false,
+          "createdAt": "2026-05-15T18:56:33.818Z",
+          "updatedAt": "2026-05-15T19:04:16.052Z",
+          "certificate": "Responsive Web Design",
+          "certificateLink": "https://www.freecodecamp.org/certification/AmirwebDev/responsive-web-design"
+        },
+        {
+          "id": "0515eafa-a52a-4ea0-9da4-b56d2c2d1c7b",
+          "infoHtml": "",
+          "isHidden": false,
+          "createdAt": "2025-08-21T17:24:16.253Z",
+          "updatedAt": "2026-05-15T18:59:41.601Z",
+          "certificate": "Google AI Essentials",
+          "certificateLink": "https://www.coursera.org/account/accomplishments/specialization/19KQ7EQU1SAG",
+          "showPlaceholder": false
+        }
+      ],
+      "iconKey": "certificate",
+      "displayName": "Certificates",
+      "sectionType": "certificate",
+      "disableAutoSort": true
+    },
+    "65MTdKWOesArce1AIO_Tx": {
+      "text": "",
+      "entries": [
+        {
+          "id": "ALr-0MBuhl5EB5HPSCNrJ",
+          "isHidden": true,
+          "location": "",
+          "titleLink": "",
+          "endDateNew": "",
+          "isNewEntry": false,
+          "description": "<ul><li>Project management and team workspace tools: <strong>Trello, GitHub Project</strong></li><li><p>Effective communication and conflict resolution</p></li><li><p>Cross-functional collaboration</p></li><li><p>Outcome-oriented mindset and decision-making</p></li><li><p>Change management and process improvement</p></li><li><p>Time management and prioritization</p></li><li><p>Building trust and fostering a positive team culture</p></li></ul>",
+          "startDateNew": "",
+          "showPlaceholder": false
+        }
+      ],
+      "iconKey": "puzzle-piece",
+      "displayName": "Soft Skills",
+      "sectionType": "custom",
+      "disableAutoSort": false
+    }
+  },
+  "customization": {
+    "font": {
+      "selected": "serif",
+      "fontFamily": "Roboto"
+    },
+    "colors": {
+      "mode": "basic",
+      "basic": {
+        "multi": {
+          "textColor": "#000000",
+          "accentColor": "#84D2F6",
+          "backgroundColor": "#ffffff"
+        },
+        "single": "#003d80",
+        "selected": "single",
+        "multiCustom": {
+          "textColor": "#000",
+          "accentColor": "#ef2124",
+          "backgroundColor": "#fff"
+        },
+        "singleCustom": "#003d80"
+      },
+      "border": {
+        "top": true,
+        "left": true,
+        "right": true,
+        "width": "m",
+        "bottom": true,
+        "single": "#003d80",
+        "selected": "single",
+        "singleCustom": "#ef2124"
+      },
+      "advanced": {
+        "multi": {
+          "light": {
+            "textColor": "#000",
+            "accentColor": "#ef2124",
+            "backgroundColor": "#fff"
+          },
+          "strong": {
+            "textColor": "#ffffff",
+            "accentColor": "#ffffff",
+            "backgroundColor": "#000000"
+          }
+        },
+        "single": "#003d80",
+        "selected": "multi",
+        "multiCustom": {
+          "light": {
+            "textColor": "#000",
+            "accentColor": "#ef2124",
+            "backgroundColor": "#fff"
+          },
+          "strong": {
+            "textColor": "#ffffff",
+            "accentColor": "#ffffff",
+            "backgroundColor": "#000000"
+          }
+        },
+        "singleCustom": "#003d80"
+      }
+    },
+    "expert": {
+      "footer": {
+        "name": false,
+        "email": false,
+        "pages": false,
+        "custom": {
+          "col1": "",
+          "col2": "",
+          "col3": "",
+          "enabled": false
+        }
+      },
+      "subTitlePlacement": "trySameLine",
+      "showProfileHeading": true,
+      "mergeProfileWithHeader": false
+    },
+    "header": {
+      "photo": {
+        "show": false,
+        "size": "xs",
+        "grayscale": false
+      },
+      "nameSize": "xs",
+      "alignText": "start",
+      "iconFrame": "none",
+      "detailsGrid": false,
+      "jobTitleSize": "s",
+      "jobTitleStyle": "normal",
+      "accentuateName": true,
+      "iconFrameStyle": "filled",
+      "jobTitlePosition": "sameLine",
+      "detailsArrangement": "wrap",
+      "detailsDisplayCenter": "icon",
+      "detailsDisplayLeftRight": "icon",
+      "photoPositionHeaderOnTop": "right",
+      "photoPositionHeaderInColumn": "below",
+      "photoPositionFromHeaderPosition": {
+        "top": "right",
+        "left": "center",
+        "right": "center"
+      }
+    },
+    "layout": {
+      "colsFromDetails": {
+        "top": "one",
+        "left": "mix",
+        "right": "mix"
+      },
+      "detailsPosition": "top",
+      "colWidthsFromDetails": {
+        "top": {
+          "leftWidth": 50,
+          "rightWidth": 50
+        },
+        "left": {
+          "leftWidth": 50,
+          "rightWidth": 50
+        },
+        "right": {
+          "leftWidth": 50,
+          "rightWidth": 50
+        }
+      }
+    },
+    "heading": {
+      "icons": "none",
+      "style": "box",
+      "headingSize": "s",
+      "capitalization": "uppercase"
+    },
+    "spacing": {
+      "fontSize": "3",
+      "lineHeight": "3",
+      "spacingFactor": "0",
+      "marginVertical": "0",
+      "marginHorizontal": "0"
+    },
+    "advanced": {
+      "linkIcon": "none",
+      "listStyle": "bullet",
+      "makeLinksBlue": false,
+      "underlineLinks": false,
+      "groupPromotions": false,
+      "applyLinkStylingToHeaderLinks": {
+        "phone": false,
+        "displayEmail": false
+      }
+    },
+    "regional": {
+      "format": "A4",
+      "anonymous": false,
+      "dateDisplay": "DD/MM/YYYY",
+      "monthFormat": "MM",
+      "dateDelimiter": "/"
+    },
+    "arabicFont": "IBM Plex Sans Arabic",
+    "hebrewFont": "Assistant",
+    "pageFormat": "A4",
+    "entryLayout": {
+      "colMode": "auto",
+      "colWidths": {
+        "dateLocationLeft": {
+          "left": 0,
+          "right": 0
+        },
+        "dateLocationRight": {
+          "left": 0,
+          "right": 0
+        },
+        "dateContentLocation": {
+          "left": 0,
+          "right": 0,
+          "middle": 0
+        }
+      },
+      "displayMode": "fullWidth",
+      "subtitleStyle": "bold",
+      "bodyIndentation": "0",
+      "dateLocationOpacity": false,
+      "titleAndSubtitleSize": "s"
+    },
+    "workDisplay": {
+      "jobTitleBeforeEmployer": true
+    },
+    "japaneseFont": "Noto Sans JP",
+    "sectionOrder": {
+      "mix": [
+        "profile",
+        "work",
+        "education",
+        "skill",
+        "break",
+        "language",
+        "certificate",
+        "65MTdKWOesArce1AIO_Tx"
+      ],
+      "one": {
+        "sectionsSorted": [
+          "profile",
+          "work",
+          "skill",
+          "education",
+          "certificate",
+          "language",
+          "65MTdKWOesArce1AIO_Tx"
+        ]
+      },
+      "two": {
+        "leftSectionsSorted": [
+          "education",
+          "skill"
+        ],
+        "rightSectionsSorted": [
+          "profile",
+          "work",
+          "language",
+          "certificate",
+          "65MTdKWOesArce1AIO_Tx"
+        ]
+      }
+    },
+    "skillDisplay": {
+      "grid": {
+        "columns": "four"
+      },
+      "text": "newLine",
+      "level": {
+        "selected": "text"
+      },
+      "selected": "text",
+      "addRowSpacing": true,
+      "subinfoSeparator": "colon"
+    },
+    "fullDateFormat": "DD/MM/YYYY",
+    "interestDisplay": {
+      "grid": {
+        "columns": "two"
+      },
+      "text": "wrap",
+      "selected": "text",
+      "addRowSpacing": true,
+      "subinfoSeparator": "dash"
+    },
+    "languageDisplay": {
+      "grid": {
+        "columns": "two"
+      },
+      "text": "bullet",
+      "level": {
+        "selected": "text"
+      },
+      "selected": "text",
+      "addRowSpacing": true,
+      "subinfoSeparator": "dash"
+    },
+    "monthYearFormat": "MM/YYYY",
+    "applyAccentColor": {
+      "name": true,
+      "dates": false,
+      "icons": true,
+      "headings": true,
+      "jobTitle": true,
+      "linkIcons": true,
+      "headingLine": true,
+      "entrySubtitle": false,
+      "dotsBarsBubbles": true
+    },
+    "creativeNameFont": "bodyFont",
+    "educationDisplay": {
+      "degreeBeforeSchool": true
+    },
+    "certificateDisplay": {
+      "grid": {
+        "columns": "two"
+      },
+      "text": "bullet",
+      "selected": "grid",
+      "addRowSpacing": true,
+      "subinfoSeparator": "dash"
+    },
+    "declarationDisplay": {
+      "line": "solid",
+      "position": "right",
+      "showHeading": true
+    },
+    "lastUsedTemplateId": "6a06c3a8a1fc9ec68a83e551",
+    "customSkillSections": {},
+    "templateSectionOrder": {
+      "mix": [
+        "profile",
+        "work",
+        "education",
+        "skill",
+        "break"
+      ],
+      "one": {
+        "sectionsSorted": [
+          "profile",
+          "work",
+          "education",
+          "skill"
+        ]
+      },
+      "two": {
+        "leftSectionsSorted": [
+          "education",
+          "skill"
+        ],
+        "rightSectionsSorted": [
+          "profile",
+          "work"
+        ]
+      }
+    },
+    "unsplashImageHistory": [],
+    "hasManuallyResortedSectionOrder": true
+  },
+  "feedback": {
+    "comments": []
+  },
+  "businessDetails": {
+    "email": "",
+    "phone": "",
+    "address": "",
+    "company": "",
+    "logoImageId": "",
+    "dontUseBusinessTemplate": false
+  },
+  "downloads": [
+    "2024-09-12T20:36:04.982Z",
+    "2024-09-12T20:36:10.440Z",
+    "2024-09-12T20:36:20.401Z",
+    "2024-09-12T20:36:42.626Z",
+    "2024-09-12T20:36:48.122Z",
+    "2024-09-12T20:36:57.234Z",
+    "2024-09-12T20:38:03.756Z",
+    "2024-09-12T20:38:09.254Z",
+    "2024-09-12T20:38:17.763Z",
+    "2024-09-12T20:38:23.182Z",
+    "2024-09-12T20:38:32.526Z",
+    "2024-09-12T20:38:41.609Z",
+    "2024-09-12T21:20:09.698Z",
+    "2024-09-12T21:20:14.782Z",
+    "2024-09-12T21:20:23.893Z",
+    "2024-09-12T21:20:30.367Z",
+    "2024-09-12T21:23:03.977Z",
+    "2024-09-12T21:23:14.212Z",
+    "2024-09-12T21:23:28.136Z",
+    "2024-09-12T21:23:45.959Z",
+    "2024-09-12T21:35:39.653Z",
+    "2024-09-12T21:35:49.582Z",
+    "2024-09-12T21:36:03.520Z",
+    "2024-09-12T21:36:13.186Z",
+    "2024-09-13T17:39:26.489Z",
+    "2024-09-17T18:57:34.061Z",
+    "2024-09-17T18:57:41.104Z",
+    "2024-09-17T18:57:52.219Z",
+    "2024-09-17T18:57:56.536Z",
+    "2024-10-13T18:42:35.144Z",
+    "2024-10-14T11:54:18.292Z",
+    "2024-10-14T11:54:21.948Z",
+    "2024-10-14T11:54:23.511Z",
+    "2024-10-14T11:54:32.565Z",
+    "2024-10-14T17:20:12.883Z",
+    "2024-10-14T17:20:17.170Z",
+    "2024-10-14T17:20:18.742Z",
+    "2024-10-14T17:20:28.565Z",
+    "2024-12-14T18:19:48.330Z",
+    "2024-12-14T18:19:55.738Z",
+    "2024-12-14T18:19:56.198Z",
+    "2024-12-14T18:20:05.617Z",
+    {
+      "date": "2025-08-21T17:33:41.378Z",
+      "type": "direct"
+    },
+    {
+      "date": "2025-08-21T17:33:42.704Z",
+      "type": "direct"
+    },
+    {
+      "date": "2025-08-21T17:33:46.845Z",
+      "type": "direct"
+    },
+    {
+      "date": "2025-08-21T17:33:56.659Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-15T20:23:51.894Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-15T20:23:56.527Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-15T20:23:58.341Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-15T20:24:05.132Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:27:51.622Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:27:52.598Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:27:56.303Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:27:57.100Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:28:04.921Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:28:05.670Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:30:54.871Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:30:55.695Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:30:59.455Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:31:00.217Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:31:08.177Z",
+      "type": "direct"
+    },
+    {
+      "date": "2026-05-30T11:31:09.035Z",
+      "type": "direct"
+    }
+  ],
+  "usingBusinessTemplateId": "",
+  "schemaVersion": "19",
+  "lastChangeAt": "2026-05-30T11:30:34.768Z",
+  "createdAt": "2024-09-10T00:47:05.541Z",
+  "updatedAt": "2026-05-30T11:30:34.768Z",
+  "lng": "en",
+  "tags": []
+}

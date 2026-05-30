@@ -2,12 +2,15 @@
 
 Copy any prompt below into Claude Code.
 
+GitHub Copilot / VS Code users can run the matching workspace prompt files from `.github/prompts/`.
+The workspace also ships Copilot slash skills in `.github/skills/flowcv` and `.github/skills/flowcv-cli`.
+
 ---
 
 ## CLI Only
 
 ```
-Install the FlowCV CLI from https://github.com/EhsanulHaqueSiam/flowcv-mcp:
+Install the FlowCV CLI from https://github.com/amirwebd3v/Flowcv-mcp:
 
 1. Clone the repo and run ./setup.sh (builds + links the CLI globally)
 2. Run "flowcv login" to open Chrome and authenticate
@@ -19,13 +22,14 @@ Install the FlowCV CLI from https://github.com/EhsanulHaqueSiam/flowcv-mcp:
 ## CLI + MCP Server
 
 ```
-Install FlowCV CLI + MCP server from https://github.com/EhsanulHaqueSiam/flowcv-mcp:
+Install FlowCV CLI + MCP server from https://github.com/amirwebd3v/Flowcv-mcp:
 
-1. Clone the repo and run "./setup.sh --mcp" (builds CLI, installs MCP + CLI skills)
+1. Clone the repo and run "./setup.sh --mcp" (builds CLI, installs Claude skills, and prepares the GitHub Copilot workspace config)
 2. Run "flowcv login" to authenticate via Chrome
-3. Add the MCP server: claude mcp add -s user flowcv -- node <repo-path>/dist/index.js
-4. Test the MCP server with flowcv_get_user and flowcv_list_resumes
-5. Show me what tools are available
+3. In GitHub Copilot / VS Code, open the repo and start the `flowcv` server from `.vscode/mcp.json`
+4. In Claude Code, add the MCP server: claude mcp add -s user flowcv -- node <repo-path>/dist/index.js
+5. Test the MCP server with flowcv_get_user and flowcv_list_resumes
+6. Show me what tools are available
 ```
 
 ---
@@ -37,10 +41,11 @@ If you already have the repo cloned:
 ```
 Set up FlowCV from this repo:
 
-1. Run "./setup.sh --mcp" to build, link CLI, and install skills
+1. Run "./setup.sh --mcp" to build, link CLI, install Claude skills, and prepare the GitHub Copilot workspace config
 2. Run "flowcv login" to authenticate
-3. Add MCP server: claude mcp add -s user flowcv -- node ./dist/index.js
-4. Test with flowcv_get_user and flowcv_list_resumes
+3. In GitHub Copilot / VS Code, use `.vscode/mcp.json` to start the `flowcv` server
+4. In Claude Code, add MCP server: claude mcp add -s user flowcv -- node ./dist/index.js
+5. Test with flowcv_get_user and flowcv_list_resumes
 ```
 
 ---

@@ -40,12 +40,13 @@ FlowCV uses cookie-based auth. Extract your `flowcvsidapp` cookie:
 
 ### 3. Configure MCP
 
-Add to your `.mcp.json` or Claude Code settings:
+Add to your `.vscode/mcp.json` in VS Code or the equivalent MCP client config:
 
 ```json
 {
-  "mcpServers": {
+  "servers": {
     "flowcv": {
+      "type": "stdio",
       "command": "node",
       "args": ["<path-to>/dist/index.js"],
       "env": {
@@ -60,7 +61,7 @@ Add to your `.mcp.json` or Claude Code settings:
 
 ### Session Management (2 tools)
 - `flowcv_check_auth` - Check if cookie is valid. Call first on SESSION_EXPIRED errors
-- `flowcv_update_cookie` - Hot-swap the session cookie at runtime (no restart needed). Also persists to .mcp.json
+- `flowcv_update_cookie` - Hot-swap the session cookie at runtime (no restart needed). Also persists to supported workspace MCP configs when a FlowCV env block already exists
 
 When any tool returns a `SESSION_EXPIRED` or `NO_COOKIE` error, guide the user to get a fresh cookie from DevTools, then call `flowcv_update_cookie`. The server does NOT need to restart.
 
@@ -72,7 +73,7 @@ When any tool returns a `SESSION_EXPIRED` or `NO_COOKIE` error, guide the user t
 - `flowcv_list_resumes` - List all resumes with IDs and metadata
 - `flowcv_get_resume` - Get full resume data (sections, entries, customization)
 - `flowcv_create_resume` - Create blank resume (free plan: max 2)
-- `flowcv_duplicate_resume` - Copy an existing resume
+- `flowcv_duplicate_resume` - Copy an existing resume only when the user wants a second live version
 - `flowcv_rename_resume` - Change resume title
 - `flowcv_delete_resume` - Permanently delete resume
 - `flowcv_download_resume` - Download as PDF
@@ -80,7 +81,7 @@ When any tool returns a `SESSION_EXPIRED` or `NO_COOKIE` error, guide the user t
 
 ### Content Editing (8 tools)
 - `flowcv_save_personal_details` - Update name, email, phone, address, photo, social links
-- `flowcv_save_entry` - Create/update section entries (education, skill, project, etc.)
+- `flowcv_save_entry` - Create/update section entries (education, skill, project, etc.); existing entries are merged by ID before save
 - `flowcv_delete_entry` - Remove an entry from a section
 - `flowcv_save_entries_order` - Reorder entries within a section
 - `flowcv_save_section_name` - Rename a section heading
@@ -136,9 +137,10 @@ For full customization paths and values, see [references/customization-guide.md]
 
 1. Call `flowcv_list_resumes` to get resume IDs
 2. Call `flowcv_get_resume` with the target ID to see current data
-3. Use `flowcv_save_entry` to add/update entries (generate UUIDs for new entries)
-4. Use `flowcv_save_personal_details` for header info
-5. Use `flowcv_save_customization` for design changes
+3. If the user is on FlowCV's free plan or wants one live resume, update that resume in place and hide irrelevant entries instead of duplicating first
+4. Use `flowcv_save_entry` to add/update entries (generate UUIDs for new entries)
+5. Use `flowcv_save_personal_details` for header info
+6. Use `flowcv_save_customization` for design changes
 
 ## Section Types and Entry Fields
 

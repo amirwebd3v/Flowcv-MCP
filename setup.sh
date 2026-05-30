@@ -30,6 +30,7 @@ CLI_SKILL_DIR="$HOME/.claude/skills/flowcv-cli"
 mkdir -p "$CLI_SKILL_DIR"
 cp "$SCRIPT_DIR/skill/cli-skill/SKILL.md" "$CLI_SKILL_DIR/SKILL.md"
 echo "       CLI skill: $CLI_SKILL_DIR"
+echo "       GitHub Copilot customizations: $SCRIPT_DIR/.github/ and $SCRIPT_DIR/.vscode/mcp.json"
 
 if [[ "$1" == "--mcp" || "$1" == "--all" ]]; then
   MCP_SKILL_DIR="$HOME/.claude/skills/flowcv"
@@ -52,7 +53,12 @@ echo "  1. flowcv login            # Authenticate"
 echo ""
 
 if [[ "$1" == "--mcp" || "$1" == "--all" ]]; then
-  echo "  2. Add MCP server to Claude Code:"
+  echo "  2. GitHub Copilot / VS Code:"
+  echo "     Open this repo in VS Code and use the committed .vscode/mcp.json"
+  echo "     to run: node $SCRIPT_DIR/dist/index.js"
+  echo "     Then trust or start the flowcv server from the MCP Servers UI."
+  echo ""
+  echo "  3. Claude Code:"
   echo "     claude mcp add -s user flowcv -- node $SCRIPT_DIR/dist/index.js"
   echo ""
   echo "     Or for this project only:"

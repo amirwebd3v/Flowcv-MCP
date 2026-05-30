@@ -3,8 +3,7 @@
  * All requests are forwarded to https://app.flowcv.com/api/
  */
 
-import { readFileSync, writeFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { persistWorkspaceFlowcvCookie } from "./mcp-config.js";
 
 const API_BASE = "https://app.flowcv.com";
 
@@ -25,28 +24,17 @@ export function isAuthenticated(): boolean {
 }
 
 /**
- * Update the cookie in memory and persist it to .mcp.json so restarts use the new value.
+ * Update the cookie in memory and persist it to any supported workspace MCP config
+ * that already defines a FlowCV env block.
  */
 export function updateCookieEverywhere(rawCookieValue: string): { updated: string[]; errors: string[] } {
   setSessionCookie(`flowcvsidapp=${rawCookieValue}`);
 
-  const updated: string[] = ["in-memory session"];
-  const errors: string[] = [];
-
-  // Persist to .mcp.json (project-level)
-  const mcpPath = resolve(process.cwd(), ".mcp.json");
-  try {
-    const mcpJson = JSON.parse(readFileSync(mcpPath, "utf-8"));
-    if (mcpJson?.mcpServers?.flowcv?.env) {
-      mcpJson.mcpServers.flowcv.env.FLOWCV_SESSION_COOKIE = rawCookieValue;
-      writeFileSync(mcpPath, JSON.stringify(mcpJson, null, 2) + "\n", { mode: 0o600 });
-      updated.push(mcpPath);
-    }
-  } catch {
-    // .mcp.json might not exist or be elsewhere
-  }
-
-  return { updated, errors };
+  const persisted = persistWorkspaceFlowcvCookie(rawCookieValue);
+  return {
+    updated: ["in-memory session", ...persisted.updated],
+    errors: persisted.errors,
+  };
 }
 
 interface ApiResponse<T = unknown> {
@@ -187,6 +175,92 @@ export async function apiRequest<T = unknown>(
   }
 
   throw new Error(errMsg || `API request failed with status ${response.status}`);
+}
+
+export async function downloadResumePdf(resumeId: string, previewPageCount = 1): Promise<Uint8Array> {
+  if (!sessionCookie) {
+    throw new Error(NO_COOKIE_MSG);
+  }
+
+  const url = new URL(`${API_BASE}/api/resumes/download`);
+  url.searchParams.set("resumeId", resumeId);
+  url.searchParams.set("previewPageCount", String(previewPageCount));
+
+  const response = await fetch(url, {
+    method: "GET",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      Cookie: sessionCookie,
+    },
+    redirect: "manual",
+  });
+
+  if (response.status === 302 || response.status === 301) {
+    const location = response.headers.get("location") || "";
+    if (location.includes("login") || location.includes("signin") || location.includes("auth")) {
+      authenticated = false;
+      throw new Error(SESSION_EXPIRED_MSG);
+    }
+  }
+
+  if (response.status === 401 || response.status === 403) {
+    authenticated = false;
+    throw new Error(SESSION_EXPIRED_MSG);
+  }
+
+  const contentType = response.headers.get("content-type") || "";
+
+  if (!response.ok || contentType.includes("application/json")) {
+    let errMsg = `Download failed with status ${response.status}`;
+    try {
+      const data = (await response.json()) as { error?: string; code?: number };
+      errMsg = data.error || errMsg;
+      if (data.code === 401) {
+        authenticated = false;
+        throw new Error(SESSION_EXPIRED_MSG);
+      }
+    } catch (error) {
+      if (error instanceof Error && error.message === SESSION_EXPIRED_MSG) {
+        throw error;
+      }
+      // Keep the fallback error message when JSON parsing fails.
+    }
+    throw new Error(errMsg);
+  }
+
+  authenticated = true;
+  return new Uint8Array(await response.arrayBuffer());
+}
+
+type ResumeSection = {
+  entries?: Record<string, unknown>[];
+};
+
+type ResumeRecord = {
+  content?: Record<string, ResumeSection>;
+};
+
+export async function mergeEntryWithExisting(
+  resumeId: string,
+  sectionId: string,
+  entry: Record<string, unknown>
+): Promise<Record<string, unknown>> {
+  const entryId = entry.id;
+
+  if (typeof entryId !== "string" || entryId.length === 0) {
+    return entry;
+  }
+
+  const res = await apiRequest<{ resume: ResumeRecord }>(`/api/resumes/${resumeId}`);
+  const existingEntry = res.data.resume.content?.[sectionId]?.entries?.find(
+    (candidate) => candidate.id === entryId
+  );
+
+  if (!existingEntry) {
+    return entry;
+  }
+
+  return { ...existingEntry, ...entry, id: entryId };
 }
 
 export function handleApiError(error: unknown): string {

@@ -35,6 +35,8 @@ flowcv resume download <id>
 flowcv resume translate <id> <lang>
 ```
 
+For free-plan or single-resume workflows, prefer updating the existing resume in place and hiding irrelevant entries instead of duplicating unless the user explicitly wants a second live copy.
+
 ## Section Entries
 
 ```bash
@@ -44,6 +46,8 @@ flowcv entry delete <resume_id> <section> <entry_id>
 flowcv entry list <resume_id> <section>
 flowcv entry reorder <resume_id> <section> --data '["id1","id2"]'
 ```
+
+`flowcv entry update` merges the provided fields with the current stored entry by ID before saving, so omitted fields are preserved.
 
 Section types: profile, education, skill, project, award, language, interest, reference, certificate, declaration, custom, custom2, custom3, custom4, customSkill1, customSkill2
 

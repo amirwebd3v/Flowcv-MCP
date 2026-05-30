@@ -72,6 +72,11 @@ Auth: Cookie-based (`flowcvsidapp` session cookie)
 <strong>Bold</strong>, <em>Italic</em>, <a href="url">Link</a>
 ```
 
+**Update behavior note:**
+- Raw `/api/resumes/save_entry` calls behave like full-entry replacement in practice.
+- The CLI `flowcv entry update` command and MCP `flowcv_save_entry` tool in this repo merge the current stored entry by ID before saving, so partial updates preserve omitted fields.
+- Custom scripts that call `/api/resumes/save_entry` directly should still send every field they want to keep.
+
 ### Section Management
 | Method | Endpoint | Body/Params |
 |--------|----------|-------------|
@@ -153,6 +158,7 @@ Common: `en`, `en_US`, `de`, `fr`, `es`, `pt`, `it`, `nl`, `pl`, `sv`, `da`, `fi
 ## Free Plan Limits
 
 - Max 2 resumes
+- If you only keep one live resume, update it in place and hide irrelevant entries instead of duplicating.
 - Limited templates
 - No AI credits
 - FlowCV watermark on downloads

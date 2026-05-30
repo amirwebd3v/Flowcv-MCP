@@ -8,10 +8,12 @@
  * Auth: Set FLOWCV_SESSION_COOKIE env var to your 'flowcvsidapp' cookie value.
  */
 
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { apiRequest, handleApiError, initFromConfig, setSessionCookie, updateCookieEverywhere, verifyAuth } from "./api-client.js";
+import { apiRequest, downloadResumePdf, handleApiError, initFromConfig, mergeEntryWithExisting, setSessionCookie, updateCookieEverywhere, verifyAuth } from "./api-client.js";
 
 const server = new McpServer({
   name: "flowcv-mcp-server",
@@ -86,7 +88,7 @@ server.registerTool(
     title: "Update Session Cookie",
     description: `Update the FlowCV session cookie at runtime (no server restart needed).
 Use this when the session has expired. Pass the raw cookie value (starts with s%3A...).
-This updates the in-memory cookie AND persists it to .mcp.json so future restarts use the new value.
+  This updates the in-memory cookie AND persists it to any supported workspace MCP config that already defines FlowCV env vars (.vscode/mcp.json in VS Code or legacy .mcp.json).
 
 How to get a new cookie:
 1. Open https://app.flowcv.com in a browser and log in
@@ -328,18 +330,28 @@ server.registerTool(
   {
     title: "Download Resume PDF",
     description:
-      "Trigger a resume PDF download. Returns a download URL or sends via email depending on account settings.",
-    inputSchema: ResumeIdSchema,
+      "Download a resume PDF and save it to a local file. By default it saves to resume-<id>.pdf in the current working directory.",
+    inputSchema: z.object({
+      resume_id: z.string().describe("The resume UUID"),
+      output_path: z.string().optional().describe("Optional file path for the PDF. Relative paths resolve from the current working directory."),
+      preview_page_count: z.number().int().positive().optional().describe("Optional preview page count hint for FlowCV's PDF renderer. Defaults to 1."),
+    }),
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
   },
-  async ({ resume_id }) => {
+  async ({ resume_id, output_path, preview_page_count }) => {
     try {
-      const res = await apiRequest<Record<string, unknown>>(
-        "/api/resumes/download",
-        "POST",
-        { resumeId: resume_id }
-      );
-      return { content: [{ type: "text", text: JSON.stringify(res.data, null, 2) }] };
+      const pdfBytes = await downloadResumePdf(resume_id, preview_page_count ?? 1);
+      const filePath = path.resolve(output_path || `resume-${resume_id}.pdf`);
+      await mkdir(path.dirname(filePath), { recursive: true });
+      await writeFile(filePath, pdfBytes);
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Resume PDF saved to ${filePath} (${pdfBytes.byteLength} bytes).`,
+          },
+        ],
+      };
     } catch (e) {
       return { content: [{ type: "text", text: handleApiError(e) }], isError: true };
     }
@@ -421,7 +433,8 @@ server.registerTool(
   {
     title: "Save/Update Section Entry",
     description: `Create or update an entry in a resume section. To create a new entry, include an "id" field
-(generate a UUID). To update an existing entry, use its existing ID.
+generate a UUID). To update an existing entry, use its existing ID. Existing entries are merged with the stored
+entry before save, so partial updates are safe when the ID already exists.
 
 Section types and their entry fields:
 - profile: {id, text}
@@ -452,10 +465,11 @@ Descriptions support HTML: <p>text</p>, <strong>bold</strong>, <ul><li>item</li>
   },
   async ({ resume_id, section_id, entry }) => {
     try {
+      const mergedEntry = await mergeEntryWithExisting(resume_id, section_id, entry);
       await apiRequest("/api/resumes/save_entry", "PATCH", {
         resumeId: resume_id,
         sectionId: section_id,
-        entry,
+        entry: mergedEntry,
       });
       return { content: [{ type: "text", text: `Entry saved in section "${section_id}".` }] };
     } catch (e) {
