@@ -4,6 +4,50 @@ MCP (Model Context Protocol) server and CLI tool that gives AI assistants full c
 
 Includes **Claude Code skills** plus **GitHub Copilot / VS Code customizations** (`.vscode/mcp.json`, `.github/copilot-instructions.md`, `.github/prompts/`, and `.github/skills/`) so both ecosystems can use the same server and CLI workflow.
 
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant H as Harness (Claude Code)
+    participant L as Claude (LLM)
+    participant S as FlowCV MCP Server (node dist/index.js)
+    participant F as FlowCV Web API (app.flowcv.com)
+
+    Note over H,S: Startup, no LLM
+    H->>S: spawn over stdio, then initialize and tools/list
+    S-->>H: schemas of 50 tools
+
+    U->>H: Write a cover letter for my current resume
+    H->>L: prompt + tool schemas
+    L-->>H: tool_use: flowcv_list_resumes
+    H->>S: tools/call
+    S->>F: HTTP request with Cookie header
+    F-->>S: JSON
+    S-->>H: markdown text
+    H->>L: tool_result
+    L-->>H: tool_use: flowcv_get_resume
+    H->>S: tools/call
+    S->>F: GET
+    F-->>S: resume data
+    S-->>H: resume JSON
+    H->>L: tool_result
+
+    Note over L: The only step where the letter text is generated
+    L-->>H: tool_use: flowcv_create_letter
+    H->>S: tools/call
+    S->>F: POST /api/letters/...
+    F-->>S: letter id
+    S-->>H: id
+    H->>L: tool_result
+    L-->>H: tool_use: flowcv_save_letter_body with HTML
+    H->>S: tools/call
+    S->>F: POST /api/letters/save_body
+    F-->>S: ok
+    S-->>H: Body saved
+    H->>L: tool_result
+    L-->>H: final answer
+    H-->>U: reply
+```
+
 ## What Can It Do?
 
 **Resume Management** — Create, duplicate, rename, delete, download PDF, translate to 20+ languages
